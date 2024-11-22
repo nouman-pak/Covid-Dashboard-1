@@ -38,34 +38,6 @@ continent_fig = px.bar(
 continent_fig.update_layout(title_font_size=20)
 st.plotly_chart(continent_fig)
 
-# World Map of Total Cases
-#st.subheader("3. Geographical Distribution of Total Cases")
-#map_fig = px.choropleth(
- #   data,
-  #  locations="iso_code",
-   # color="total_cases",
-   # hover_name="location",
-  #  title="World Map of Total Cases",
-   # labels={"total_cases": "Total Cases"},
-   # color_continuous_scale="Blues",
-#)
-#map_fig.update_layout(title_font_size=20)
-#st.plotly_chart(map_fig)
-
-# World Map of Total Cases with Separate Colors for Each Continent
-#st.subheader("3. Geographical Distribution of Total Cases by Continent")
-#map_fig = px.choropleth(
- #   data,
-  #  locations="iso_code",
-   # color="continent",  # Separate color for each continent
-    #hover_name="location",
-   # title="World Map of Total Cases by Continent",
-   # labels={"continent": "Continent"},
-   # category_orders={"continent": ["Africa", "Asia", "Europe", "North America", "Oceania", "South America"]},
-    #color_discrete_sequence=px.colors.qualitative.Set2  # Use a qualitative color palette
-#)
-#map_fig.update_layout(title_font_size=20, legend_title_text="Continent")
-#st.plotly_chart(map_fig)
 
 
 data = load_data()
@@ -99,12 +71,6 @@ heatmap_fig = px.choropleth(
 )
 heatmap_fig.update_layout(title_font_size=20, legend_title_text="Total Cases")
 st.plotly_chart(heatmap_fig)
-
-# Footer
-st.write("---")
-st.write("**Data Source**: Our World in Data (OWID)")
-
-# End of Streamlit App
 
 # Total Deaths Over Time
 st.subheader("4. Total Deaths Over Time")
